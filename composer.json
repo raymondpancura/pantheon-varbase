@@ -1,14 +1,19 @@
 {
-    "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "name": "vardot/varbase-project",
+    "description": "Project template for Varbase 8.4.x projects with composer",
     "type": "project",
     "license": "GPL-2.0+",
     "authors": [
-        {
-            "name": "",
-            "role": ""
-        }
+      {
+          "name": "Vardot",
+          "homepage": "https://github.com/vardot",
+          "role": "Maintainer"
+      }
     ],
+    "support": {
+        "issues": "http://drupal.org/project/issues/varbase",
+        "source": "http://cgit.drupalcode.org/varbase"
+    },
     "repositories": [
         {
             "type": "composer",
@@ -16,21 +21,32 @@
         }
     ],
     "require": {
-        "composer/installers": "^1.0.20",
-        "drupal-composer/drupal-scaffold": "^2.0.1",
-        "cweagans/composer-patches": "~1.0",
-        "drupal/core": "~8.0",
         "drush/drush": "~8.0",
-        "drupal/console": "~1.0"
-    },
-    "require-dev": {
-        "behat/mink": "~1.7",
-        "behat/mink-goutte-driver": "~1.2",
-        "jcalderonzumba/gastonjs": "~1.0.2",
-        "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-        "mikey179/vfsStream": "~1.2",
-        "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "~2.8"
+        "drupal/console": "~1.0",
+        "composer/installers": "1.4.0",
+        "cweagans/composer-patches": "1.6.2",
+        "drupal-composer/drupal-scaffold": "2.3.0",
+        "drupal/drupal-library-installer-plugin": "0.3",
+        "webflo/drupal-finder": "1.0",
+        "webmozart/path-util": "2.3",
+        "vardot/varbase": "^8.4.09",
+        "drupal/views_bootstrap": "3.x-dev#b34caf9ede249c2a9c90ee5dfb8a9020f5048858",
+        "drupal/extlink": "1.x-dev#8a773a6c5519ccb167e18cc39d68551b30b0e4b3",
+        "drupal/image_resize_filter": "1.x-dev#c3f4b23b02005859092aaff746b9f21b794adc58",
+        "drupal/entity_clone": "1.x-dev#9265e359bd31bda693dac9ad84ad52fe63531488",
+        "drupal/pathologic": "1.x-dev#e0473546e51cbeaa3acb34e3208a0c503ca85613",
+        "drupal/entityqueue": "1.x-dev#e17c172fe1bfdab2194b06b848cad92bc6824e49",
+        "drupal/tour_ui": "1.x-dev#5cf793c071aeddea0ecd20d80b541606bfe2aff1",
+        "drupal/tour_builder": "1.x-dev#d70e898949b7ec4095efb391a0dbec56d0117558",
+        "drupal/l10n_client": "1.x-dev#9bf8d597732870bdca301512c71b6e5d74d48db2",
+        "drupal/node_edit_protection": "1.x-dev#902339c08222f838030c07aaea23bdc51ababebd",
+        "drupal/security_review": "1.x-dev#35ebae445bb260e961e47c4c58efe7c50c228999",
+        "drupal/menu_position": "1.x-dev#1e3a6778acc74a35174d297052ec44995d5e5137",
+        "drupal/mail_edit": "1.x-dev#bcd0041830d8581b36e6211f0c8eabd8caf9652b",
+        "drupal/libraries": "3.x-dev#061ead081c92a6209b09eaf23b4e3103f360946e",
+        "drupal/google_analytics_reports": "3.x-dev#2b6bb8efbc7f61ce3c1225638075aa6037b8db44",
+        "drupal/login_destination": "1.x-dev#98892eb84eba6fe69d4fc48dc5b1fdaccb21c8a7",
+        "drupal/total_control": "2.x-dev#d5c4aea34daf4260a4948e1d0c2322ecfd2a973a"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -39,38 +55,32 @@
             "scripts/composer/ScriptHandler.php"
         ]
     },
-    "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+  "scripts": {
+      "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "pre-install-cmd": [
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "pre-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
-    },
+      "post-install-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+      ],
+      "post-update-cmd": [
+        "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+      ],
+      "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
+  },
     "extra": {
         "installer-paths": {
-            "web/core": [
-                "type:drupal-core"
-            ],
-            "web/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "web/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "web/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/contrib/{$name}": [
-                "type:drupal-drush"
-            ]
+          "web/core": ["drupal/core"],
+          "web/profiles/{$name}": ["type:drupal-profile"],
+          "web/modules/contrib/{$name}": ["type:drupal-module"],
+          "web/themes/contrib/{$name}": ["type:drupal-theme"],
+          "web/libraries/{$name}": ["type:drupal-library"],
+          "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+          "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+          "drush/contrib/{$name}": ["type:drupal-drush"]
         }
     },
     "replace": {

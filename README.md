@@ -1,19 +1,19 @@
-# Drupal project template for Platform.sh
+# Varbase project template for Platform.sh
 
-This project provides a starter kit for Drupal 8 projects hosted on [Platform.sh](http://platform.sh). It
-is very closely based on the [Drupal Composer project](https://github.com/drupal-composer/drupal-project).
+This project provides a starter kit for Varbase 8.4.x projects hosted on [Platform.sh](http://platform.sh). It
+is very closely based on the [Varbase Composer project](https://github.com/Vardot/varbase-project).
 
 ## Starting a new project
 
-To start a new Drupal 8 project on Platform.sh, you have 2 options:
+To start a new Varbase 8.4.x project on Platform.sh, you have 2 options:
 
 1. Create a new project through the Platform.sh user interface and select "start
-   new project from a template".  Then select Drupal 8 as the template. That will
+   new project from a template".  Then select Varbase 8.4.x as the template. That will
    create a new project using this repository as a starting point.
 
 2. Take an existing project, add the necessary Platform.sh files, and push it
    to a Platform.sh Git repository. This template includes examples of how to
-   set up a Drupal 8 site.  (See the "differences" section below.)
+   set up a Varbase 8.4.x site.  (See the "differences" section below.)
 
 ## Using as a reference
 
