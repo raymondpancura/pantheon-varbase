@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b95327915ad81f99a62782e400a6c0b7",
+    "content-hash": "ebc92bfa693d7df351a2712ed7515f3a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1966,17 +1966,17 @@
         },
         {
             "name": "drupal/config_perms",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_perms",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_perms-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "5e447e086729249afd18cbb2cde7a0f250e80224"
+                "url": "https://ftp.drupal.org/files/projects/config_perms-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "708619cf3ee2f1f16a71414a6ff79f1f4803aa42"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1987,15 +1987,15 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1484318883",
+                    "version": "8.x-1.1",
+                    "datestamp": "1510164716",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "patches_applied": {
-                    "Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist": "https://www.drupal.org/files/issues/config_perms-added_missing_edit_route-2877329-11.patch"
+                    "Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist": "https://www.drupal.org/files/issues/2877329-16.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2812,17 +2812,17 @@
         },
         {
             "name": "drupal/drd_agent",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/drd_agent",
-                "reference": "8.x-3.4"
+                "reference": "8.x-3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/drd_agent-8.x-3.4.zip",
-                "reference": "8.x-3.4",
-                "shasum": "bb96ca83f7a09eed5813e98517a32834c5161a5d"
+                "url": "https://ftp.drupal.org/files/projects/drd_agent-8.x-3.5.zip",
+                "reference": "8.x-3.5",
+                "shasum": "3dfd74ae0ffd928ce9d2ffc598a109460b54e166"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2833,8 +2833,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.4",
-                    "datestamp": "1510076586",
+                    "version": "8.x-3.5",
+                    "datestamp": "1510570685",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -11123,16 +11123,16 @@
         },
         {
             "name": "vardot/varbase",
-            "version": "8.4.11",
+            "version": "8.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Vardot/varbase.git",
-                "reference": "2bdd02a097e908acfa7ab9d45628ec033f79cef7"
+                "reference": "0aeb08da328f1e044b002e20d2bc074c1df89d81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Vardot/varbase/zipball/2bdd02a097e908acfa7ab9d45628ec033f79cef7",
-                "reference": "2bdd02a097e908acfa7ab9d45628ec033f79cef7",
+                "url": "https://api.github.com/repos/Vardot/varbase/zipball/0aeb08da328f1e044b002e20d2bc074c1df89d81",
+                "reference": "0aeb08da328f1e044b002e20d2bc074c1df89d81",
                 "shasum": ""
             },
             "require": {
@@ -11159,7 +11159,7 @@
                 "drupal/color_field": "2.0-rc2",
                 "drupal/config_filter": "1.0",
                 "drupal/config_ignore": "2.1",
-                "drupal/config_perms": "1.0",
+                "drupal/config_perms": "1.1",
                 "drupal/config_update": "1.4",
                 "drupal/content_lock": "1.0-alpha4",
                 "drupal/core": "8.4.2",
@@ -11168,7 +11168,7 @@
                 "drupal/default_content": "1.0-alpha7",
                 "drupal/devel": "1.2",
                 "drupal/diff": "1.0-rc1",
-                "drupal/drd_agent": "3.4",
+                "drupal/drd_agent": "3.5",
                 "drupal/dropzonejs": "1.0-alpha8",
                 "drupal/drupal-library-installer-plugin": "0.3",
                 "drupal/ds": "3.1",
@@ -11375,7 +11375,7 @@
                         "Issue #2900313: Add ability to embed tweets and other rich content in WYSIWYG": "https://www.drupal.org/files/issues/embed_rich_content_in_WYSIWYG-2900313-2.patch"
                     },
                     "drupal/config_perms": {
-                        "Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist": "https://www.drupal.org/files/issues/config_perms-added_missing_edit_route-2877329-11.patch"
+                        "Issue #2877329: When [content_translation, config_translate] module is enabled, And enabled [Custom Permissions], Then we will get  Route custom_perms_select_list_form does not exist": "https://www.drupal.org/files/issues/2877329-16.patch"
                     },
                     "drupal/username_enumeration_prevention": {
                         "Issue #2871931: hook_requirements error on install phase": "https://www.drupal.org/files/issues/username_enumeration_prevention-check_phase_runtime-2871931-5.patch"
@@ -11433,7 +11433,7 @@
                 }
             ],
             "description": "Varbase: The Ultimate Drupal 8 CMS Starter Kit (Bootstrap Ready) | by Vardot",
-            "time": "2017-11-07T07:04:41+00:00"
+            "time": "2017-11-09T13:43:06+00:00"
         },
         {
             "name": "webflo/drupal-finder",
