@@ -16,6 +16,11 @@ class ScriptHandler {
   protected static function getDrupalRoot($project_root) {
     return $project_root . '/web';
   }
+  //The removeGitDirectories was being called in post-install-cmd but wasn't in this file.
+  public static function removeGitDirectories() {
+    $root = static::getDrupalRoot(getcwd());
+    exec('find ' . $root . ' -name \'.git\' | xargs rm -rf');
+  }
 
   public static function createRequiredFiles(Event $event) {
     $fs = new Filesystem();
